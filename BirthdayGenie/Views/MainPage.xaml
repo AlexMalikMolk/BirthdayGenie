@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<uranium:UraniumContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             Shell.NavBarIsVisible="false"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+             xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+             xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+             x:Class="BirthdayGenie.MainPage"
+
+             xmlns:local="clr-namespace:BirthdayGenie"
+             x:Name="page">
+    <uranium:UraniumContentPage.BindingContext>
+        <local:MainPageViewModel />
+    </uranium:UraniumContentPage.BindingContext>
+
+    <uranium:UraniumContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainerDark}}" />
+        </Style>
+    </uranium:UraniumContentPage.Resources>
+
+    <VerticalStackLayout Padding="20" Spacing="10" >
+
+        <Label Text="Upcoming Birthdays" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,10,0,0"/>
+        <Frame Padding="0" CornerRadius="10">
+            <ListView x:Name="BirthdaysListView" HeightRequest="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Name}" VerticalOptions="Center" Grid.Column="0" FontSize="Medium"/>
+                                <Label Text="{Binding DateOfBirth, StringFormat='{0:dd/MM/yyyy}'}" FontSize="Medium" VerticalOptions="Center" Grid.Column="1" HorizontalOptions="End"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Frame>
+
+
+        <Button StyleClass="ElevatedButton" Text="Add Birthday" Clicked="OnAddBirthdayClicked"/>
+        <Button StyleClass="ElevatedButton" Text="Settings" Clicked="OnSettingsClicked"/>
+
+
+        <Image Source="C:\ProjektApp\Bgenie\BirthdayGenie\BirthdayGenie\Images\logo2.png" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" HeightRequest="200" WidthRequest="200" Margin="0,0,0,10"/>
+    </VerticalStackLayout>
+
+</uranium:UraniumContentPage>
+
+
