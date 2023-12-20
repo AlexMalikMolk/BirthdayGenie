@@ -12,7 +12,7 @@ namespace BirthdayGenie.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Check if the options have already been configured by the factory
+
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlite($"Filename={Path.Combine(FileSystem.AppDataDirectory, "GiftGenie.db")}");

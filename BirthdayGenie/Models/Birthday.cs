@@ -19,8 +19,8 @@ namespace BirthdayGenie.Models
 
         public string? FavoriteBrand { get; set; }
         public string? FavoriteColor { get; set; }
-        public string? Size { get; set; } // For predefined sizes
-        public string? CustomSize { get; set; } // For custom input
+        public string? Size { get; set; }
+        public string? CustomSize { get; set; } 
         public string? FavoriteStore { get; set; }
     }
 }
