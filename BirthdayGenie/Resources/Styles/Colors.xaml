@@ -5,20 +5,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <!-- Light Theme Colors -->
-    <Color x:Key="Primary">#455E91</Color>
+    <Color x:Key="Primary">#475D92</Color>
     <Color x:Key="OnPrimary">#FFFFFF</Color>
-    <Color x:Key="PrimaryContainer">#D8E2FF</Color>
-    <Color x:Key="OnPrimaryContainer">#001A43</Color>
+    <Color x:Key="PrimaryContainer">#D9E2FF</Color>
+    <Color x:Key="OnPrimaryContainer">#001945</Color>
 
     <Color x:Key="Secondary">#575E71</Color>
     <Color x:Key="OnSecondary">#FFFFFF</Color>
-    <Color x:Key="SecondaryContainer">#DBE2F9</Color>
+    <Color x:Key="SecondaryContainer">#DCE2F9</Color>
     <Color x:Key="OnSecondaryContainer">#141B2C</Color>
 
-    <Color x:Key="Tertiary">#715573</Color>
+    <Color x:Key="Tertiary">#725572</Color>
     <Color x:Key="OnTertiary">#FFFFFF</Color>
-    <Color x:Key="TertiaryContainer">#FCD7FB</Color>
-    <Color x:Key="OnTertiaryContainer">#2A132D</Color>
+    <Color x:Key="TertiaryContainer">#FDD7FA</Color>
+    <Color x:Key="OnTertiaryContainer">#2A132C</Color>
 
     <Color x:Key="Error">#BA1A1A</Color>
     <Color x:Key="OnError">#FFFFFF</Color>
@@ -40,7 +40,7 @@
     <Color x:Key="InverseSurface">#2F3036</Color>
     <Color x:Key="InverseOnSurface">#F1F0F7</Color>
 
-    <Color x:Key="InversePrimary">#AEC6FF</Color>
+    <Color x:Key="InversePrimary">#B0C6FF</Color>
 
     <Color x:Key="PrimaryFixed">#D8E2FF</Color>
     <Color x:Key="OnPrimaryFixed">#001A43</Color>
@@ -48,42 +48,42 @@
     <Color x:Key="OnPrimaryFixedVariant">#2D4678</Color>
 
     <!-- Dark Theme Colors -->
-    <Color x:Key="PrimaryDark">#001A43</Color>
-    <Color x:Key="OnPrimaryDark">#D8E2FF</Color>
-    <Color x:Key="PrimaryDarkContainer">#284274</Color>
-    <Color x:Key="OnPrimaryDarkContainer">#FFFFFF</Color>
+    <Color x:Key="PrimaryDark">#B0C6FF</Color>
+    <Color x:Key="OnPrimaryDark">#152E60</Color>
+    <Color x:Key="PrimaryDarkContainer">#2E4578</Color>
+    <Color x:Key="OnPrimaryDarkContainer">#D9E2FF</Color>
 
-    <Color x:Key="SecondaryDark">#141B2C</Color>
-    <Color x:Key="OnDarkSecondary">#DBE2F9</Color>
-    <Color x:Key="SecondaryContainerDark">#3B4355</Color>
-    <Color x:Key="OnSecondaryContainerDark">#FFFFFF</Color>
+    <Color x:Key="SecondaryDark">#C0C6DC</Color>
+    <Color x:Key="OnDarkSecondary">#293042</Color>
+    <Color x:Key="SecondaryContainerDark">#404659</Color>
+    <Color x:Key="OnSecondaryContainerDark">#DCE2F9</Color>
 
-    <Color x:Key="TertiaryDark">#2A132D</Color>
-    <Color x:Key="OnTertiaryDark">#FCD7FB</Color>
-    <Color x:Key="TertiaryContainerDark">#896B8A</Color>
-    <Color x:Key="OnTertiaryContainerDark">#FFFFFF</Color>
+    <Color x:Key="TertiaryDark">#E0BBDD</Color>
+    <Color x:Key="OnTertiaryDark">#412742</Color>
+    <Color x:Key="TertiaryContainerDark">#593D5A</Color>
+    <Color x:Key="OnTertiaryContainerDark">#FDD7FA</Color>
 
-    <Color x:Key="ErrorDark">#410002</Color>
-    <Color x:Key="OnErrorDark">#FFDAD6</Color>
-    <Color x:Key="ErrorDarkContainer">#8C0009</Color>
-    <Color x:Key="OnErrorDarkContainer">#FFFFFF</Color>
+    <Color x:Key="ErrorDark">#FFB4AB</Color>
+    <Color x:Key="OnErrorDark">#690005</Color>
+    <Color x:Key="ErrorDarkContainer">#93000A</Color>
+    <Color x:Key="OnErrorDarkContainer">#FFDAD6</Color>
 
-    <Color x:Key="BackGroundDark">#1A1B20</Color>
-    <Color x:Key="OnBackgroundDark">#FAF9FF</Color>
+    <Color x:Key="BackGroundDark">#121318</Color>
+    <Color x:Key="OnBackgroundDark">#E2E2E9</Color>
 
-    <Color x:Key="SurfaceDark">#1A1B20</Color>
-    <Color x:Key="OnSurfaceDark">#FAF9FF</Color>
+    <Color x:Key="SurfaceDark">#121318</Color>
+    <Color x:Key="OnSurfaceDark">#E2E2E9</Color>
 
-    <Color x:Key="SurfaceVariantDark">#44474F</Color>
-    <Color x:Key="OnSurfaceVariantDark">#E1E2EC</Color>
+    <Color x:Key="SurfaceVariantDark">#44464F</Color>
+    <Color x:Key="OnSurfaceVariantDark">#C5C6D0</Color>
 
-    <Color x:Key="OutlineDark">#5D5F67</Color>
+    <Color x:Key="OutlineDark">#8F9099</Color>
     <Color x:Key="ScrimDark">#000000</Color>
 
-    <Color x:Key="InverseSurfaceDark">#E6E1E5</Color>
-    <Color x:Key="InverseOnSurfaceDark">#313033</Color>
+    <Color x:Key="InverseSurfaceDark">#E2E2E9</Color>
+    <Color x:Key="InverseOnSurfaceDark">#2F3036</Color>
 
-    <Color x:Key="InversePrimaryDark">#6750A4</Color>
+    <Color x:Key="InversePrimaryDark">#475D92</Color>
 
 
     <!--MAUI STANDARDS-->

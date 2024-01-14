@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BirthdayGenie.Views.RecommendGiftPage"
+             Title="RecommendGiftPage">
+    <ListView x:Name="productsListView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame Margin="10" Padding="10" BackgroundColor="#F0F0F0">
+                        <StackLayout>
+                            <Label Text="Category: " TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="{Binding Category}" TextColor="Black" />
+
+                            <Label Text="Name: " TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="{Binding Name}" TextColor="Black" />
+
+                            <Label Text="Price: " TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="{Binding Price, StringFormat='{0:C}'}" TextColor="Black" />
+
+                            <Label Text="Brand: " TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="{Binding Brand}" TextColor="Black" />
+
+                            <Label Text="Store: " TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="{Binding Store}" TextColor="Black" />
+                        </StackLayout>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

@@ -14,13 +14,10 @@ namespace BirthdayGenie.Models
 
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string? Interests { get; set; }
+        public string? Category { get; set; }
         public decimal Budget { get; set; }
 
         public string? FavoriteBrand { get; set; }
-        public string? FavoriteColor { get; set; }
-        public string? Size { get; set; }
-        public string? CustomSize { get; set; } 
         public string? FavoriteStore { get; set; }
     }
 }

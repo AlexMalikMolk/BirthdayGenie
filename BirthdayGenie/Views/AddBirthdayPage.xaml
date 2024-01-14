@@ -8,9 +8,9 @@
         <VerticalStackLayout Spacing="15" Padding="20">
             <Entry x:Name="NameEntry" Placeholder="Name" />
             <DatePicker x:Name="BirthdayPicker" />
-            <Entry x:Name="InterestsEntry" Placeholder="Interests" />
-            <Entry x:Name="FavoriteBrandEntry" Placeholder="Favorite Brand" />
-            <Entry x:Name="FavoriteStoreEntry" Placeholder="Favorite Store" />
+            <Picker x:Name="CategoryPicker" Title="Select Category" />
+            <Picker x:Name="BrandPicker" Title="Select Brand" />
+            <Picker x:Name="StorePicker" Title="Select Store" />
             <Entry x:Name="BudgetEntry" Placeholder="Budget" Keyboard="Numeric" />
             <Button Text="Save" Clicked="OnSaveClicked"/>
         </VerticalStackLayout>

@@ -1,5 +1,6 @@
 using BirthdayGenie.Models;
 using BirthdayGenie.Data;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Maui.Controls;
 using System;
@@ -10,9 +11,17 @@ namespace BirthdayGenie.Views
 
     public partial class AddBirthdayPage : ContentPage
     {
+
+        private List<string> categoryOptions = new List<string> { "Electronics", "Sports", "Books", "Home", "Clothing", "Beauty" };
+        private List<string> brandOptions = new List<string> { "Apple", "Sony", "Microsoft", "Samsung", "Adidas", "Nike" };
+        private List<string> storeOptions = new List<string> { "Mediamarkt", "Amazon", "Elgiganten", "NetOnNet", "Stadium", "IKEA", "Webhallen" };
+
         public AddBirthdayPage()
         {
             InitializeComponent();
+            CategoryPicker.ItemsSource = categoryOptions;
+            BrandPicker.ItemsSource = brandOptions;
+            StorePicker.ItemsSource = storeOptions;
         }
 
         private async void OnSaveClicked(object sender, EventArgs e)
@@ -36,10 +45,10 @@ namespace BirthdayGenie.Views
             {
                 Name = NameEntry.Text,
                 DateOfBirth = BirthdayPicker.Date,
-                Interests = InterestsEntry.Text,
+                Category = CategoryPicker.SelectedItem?.ToString(),
                 Budget = budget,
-                FavoriteBrand = FavoriteBrandEntry.Text,
-                FavoriteStore = FavoriteStoreEntry.Text
+                FavoriteBrand = BrandPicker.SelectedItem?.ToString(),
+                FavoriteStore = StorePicker.SelectedItem?.ToString() 
             };
 
             // Save the new Birthday object to the database

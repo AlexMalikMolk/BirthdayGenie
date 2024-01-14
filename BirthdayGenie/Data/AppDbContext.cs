@@ -2,6 +2,7 @@
 using BirthdayGenie.Models;
 using System.IO;
 using Microsoft.Maui.Storage;
+using System.Text.Json;
 
 namespace BirthdayGenie.Data
 {
@@ -15,7 +16,8 @@ namespace BirthdayGenie.Data
 
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlite($"Filename={Path.Combine(FileSystem.AppDataDirectory, "GiftGenie.db")}");
+                optionsBuilder.UseSqlite($"Filename={Path.Combine(FileSystem.AppDataDirectory, "BirthdayGenie.db")}");
+                
             }
         }
 
@@ -23,5 +25,8 @@ namespace BirthdayGenie.Data
         {
             return Birthdays.ToList();
         }
+
+
+
     }
 }

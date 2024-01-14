@@ -23,6 +23,7 @@ namespace BirthdayGenie
             LoadBirthdays();
         }
 
+        // Loads the list of birthdays from the database
         private void LoadBirthdays()
         {
             using (var db = new AppDbContext())
@@ -54,7 +55,6 @@ namespace BirthdayGenie
         {
             await Navigation.PushAsync(new SettingsPage());
         }
-
 
     }
 }

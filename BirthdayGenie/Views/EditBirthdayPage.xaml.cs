@@ -8,33 +8,39 @@ namespace BirthdayGenie.Views
     public partial class EditBirthdayPage : ContentPage
     {
         private Birthday birthdayToEdit;
+        private List<string> categoryOptions = new List<string> { "Electronics", "Sports", "Books", "Home", "Clothing", "Beauty" };
+        private List<string> brandOptions = new List<string> { "Apple", "Sony", "Microsoft", "Samsung", "Adidas", "Nike" };
+        private List<string> storeOptions = new List<string> { "Mediamarkt", "Amazon", "Elgiganten", "NetOnNet", "Stadium", "IKEA", "Webhallen" };
 
         public EditBirthdayPage(Birthday birthday)
         {
             InitializeComponent();
+            CategoryPicker.ItemsSource = categoryOptions;
+            BrandPicker.ItemsSource = brandOptions;
+            StorePicker.ItemsSource = storeOptions;
             birthdayToEdit = birthday;
 
             // Populate existing birthday data into fields
             NameEntry.Text = birthdayToEdit.Name;
             BirthdayPicker.Date = birthdayToEdit.DateOfBirth;
-            InterestsEntry.Text = birthdayToEdit.Interests;
+            CategoryPicker.SelectedItem = birthdayToEdit.Category;
             BudgetEntry.Text = birthdayToEdit.Budget.ToString();
-            FavoriteBrandEntry.Text = birthdayToEdit.FavoriteBrand;
-            FavoriteStoreEntry.Text = birthdayToEdit.FavoriteStore;
+            BrandPicker.SelectedItem = birthdayToEdit.FavoriteBrand;
+            StorePicker.SelectedItem = birthdayToEdit.FavoriteStore;
 
         }
 
-
+        // Event handler for the save button
         private async void SaveButton_Clicked(object sender, EventArgs e)
         {
 
             // Update birthdayToEdit with new values from fields
             birthdayToEdit.Name = NameEntry.Text;
             birthdayToEdit.DateOfBirth = BirthdayPicker.Date;
-            birthdayToEdit.Interests = InterestsEntry.Text;
-            birthdayToEdit.Budget = decimal.Parse(BudgetEntry.Text); // Add error handling
-            birthdayToEdit.FavoriteBrand = FavoriteBrandEntry.Text;
-            birthdayToEdit.FavoriteStore = FavoriteStoreEntry.Text;
+            birthdayToEdit.Category = CategoryPicker.SelectedItem?.ToString();
+            birthdayToEdit.Budget = decimal.Parse(BudgetEntry.Text);
+            birthdayToEdit.FavoriteBrand = BrandPicker.SelectedItem?.ToString();
+            birthdayToEdit.FavoriteStore = StorePicker.SelectedItem?.ToString();
 
             using (var db = new AppDbContext())
             {
@@ -46,6 +52,7 @@ namespace BirthdayGenie.Views
             await Navigation.PopAsync();
         }
 
+        // Event handler for the delete button
         private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             bool confirm = await DisplayAlert("Confirm Delete", "Are you sure you want to delete this birthday?", "Yes", "No");
@@ -60,6 +67,13 @@ namespace BirthdayGenie.Views
                 await DisplayAlert("Deleted", "Birthday has been deleted.", "OK");
                 await Navigation.PopAsync();
             }
+        }
+
+
+        // Event handler for the recommended gifts button
+        private async void OnRecommendGiftClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RecommendGiftPage(birthdayToEdit));
         }
     }
 }
