@@ -20,34 +20,13 @@ namespace BirthdayGenie.Views
             InterestsEntry.Text = birthdayToEdit.Interests;
             BudgetEntry.Text = birthdayToEdit.Budget.ToString();
             FavoriteBrandEntry.Text = birthdayToEdit.FavoriteBrand;
-            FavoriteColorPicker.SelectedItem = birthdayToEdit.FavoriteColor;
-            SizePicker.SelectedItem = birthdayToEdit.Size;
             FavoriteStoreEntry.Text = birthdayToEdit.FavoriteStore;
 
-            if (birthdayToEdit.Size == "Custom")
-            {
-                CustomSizeEntry.Text = birthdayToEdit.CustomSize; 
-                CustomSizeEntry.IsVisible = true; 
-            }
-            else
-            {
-                SizePicker.SelectedItem = birthdayToEdit.Size; 
-                CustomSizeEntry.IsVisible = false; 
-            }
-            CustomSizeEntry.IsVisible = birthdayToEdit.Size == "Custom";
         }
 
-        private void SizePicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CustomSizeEntry.IsVisible = SizePicker.SelectedItem?.ToString() == "Custom";
-        }
 
         private async void SaveButton_Clicked(object sender, EventArgs e)
         {
-
-
-            string selectedSize = SizePicker.SelectedItem?.ToString();
-            string customSize = selectedSize == "Custom" ? CustomSizeEntry.Text : string.Empty; // Use empty string instead of null
 
             // Update birthdayToEdit with new values from fields
             birthdayToEdit.Name = NameEntry.Text;
@@ -55,9 +34,6 @@ namespace BirthdayGenie.Views
             birthdayToEdit.Interests = InterestsEntry.Text;
             birthdayToEdit.Budget = decimal.Parse(BudgetEntry.Text); // Add error handling
             birthdayToEdit.FavoriteBrand = FavoriteBrandEntry.Text;
-            birthdayToEdit.FavoriteColor = FavoriteColorPicker.SelectedItem?.ToString();
-            birthdayToEdit.Size = selectedSize;
-            birthdayToEdit.CustomSize = customSize;
             birthdayToEdit.FavoriteStore = FavoriteStoreEntry.Text;
 
             using (var db = new AppDbContext())

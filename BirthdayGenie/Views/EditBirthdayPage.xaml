@@ -10,33 +10,6 @@
             <DatePicker x:Name="BirthdayPicker" />
             <Entry x:Name="InterestsEntry" Placeholder="Interests" />
             <Entry x:Name="FavoriteBrandEntry" Placeholder="Favorite Brand" />
-
-            <Picker x:Name="FavoriteColorPicker" Title="Favorite Color" SelectedIndex="0">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Red</x:String>
-                        <x:String>Blue</x:String>
-                        <x:String>Green</x:String>
-                        <x:String>Yellow</x:String>
-                        <x:String>Orange</x:String>
-                        <x:String>Purple</x:String>
-                        <x:String>Black</x:String>
-                        <x:String>White</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-
-            <Picker x:Name="SizePicker" Title="Size" SelectedIndex="0">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Small</x:String>
-                        <x:String>Medium</x:String>
-                        <x:String>Large</x:String>
-                        <x:String>Custom</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            <Entry x:Name="CustomSizeEntry" Placeholder="Custom Size" IsVisible="False" />
             <Entry x:Name="FavoriteStoreEntry" Placeholder="Favorite Store" />
             <Entry x:Name="BudgetEntry" Placeholder="Budget" Keyboard="Numeric" />
             <Button Text="Save" Clicked="SaveButton_Clicked"/>
