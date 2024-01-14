@@ -1,7 +1,7 @@
 
 using System.Text.Json;
 
-namespace ApiService
+namespace MockStore
 {
     public class Program
     {
@@ -45,6 +45,11 @@ namespace ApiService
 
                 // Return the products
                 return products;
+
+
+
+
+
             })
             .WithName("GetProducts")
             .WithOpenApi();

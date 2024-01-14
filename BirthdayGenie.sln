@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirthdayGenie", "BirthdayGenie\BirthdayGenie.csproj", "{776C67B6-815E-482A-B639-14A1BD1F074A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService", "ApiService\ApiService.csproj", "{F21DA6F8-6D7D-4906-8156-7AF731656F9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MockStore", "MockStore\MockStore.csproj", "{FCEF08DA-4C5A-4F40-B559-8DCBDB43007F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{776C67B6-815E-482A-B639-14A1BD1F074A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{776C67B6-815E-482A-B639-14A1BD1F074A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{776C67B6-815E-482A-B639-14A1BD1F074A}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{F21DA6F8-6D7D-4906-8156-7AF731656F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F21DA6F8-6D7D-4906-8156-7AF731656F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F21DA6F8-6D7D-4906-8156-7AF731656F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F21DA6F8-6D7D-4906-8156-7AF731656F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCEF08DA-4C5A-4F40-B559-8DCBDB43007F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEF08DA-4C5A-4F40-B559-8DCBDB43007F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEF08DA-4C5A-4F40-B559-8DCBDB43007F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEF08DA-4C5A-4F40-B559-8DCBDB43007F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
