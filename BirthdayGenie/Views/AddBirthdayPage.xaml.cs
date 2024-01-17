@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Maui.Controls;
 using System;
+using UraniumUI.Pages;
 
 namespace BirthdayGenie.Views
 {
 
 
-    public partial class AddBirthdayPage : ContentPage
+    public partial class AddBirthdayPage : UraniumContentPage
     {
 
         private List<string> categoryOptions = new List<string> { "Electronics", "Sports", "Books", "Home", "Clothing", "Beauty" };

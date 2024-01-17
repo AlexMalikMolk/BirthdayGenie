@@ -7,6 +7,7 @@
              xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
              xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+
              x:Class="BirthdayGenie.MainPage"
 
              xmlns:local="clr-namespace:BirthdayGenie"
@@ -48,7 +49,9 @@
         <Button StyleClass="ElevatedButton" Text="Settings" Clicked="OnSettingsClicked"/>
 
 
-        <Image Source="C:\ProjektApp\Bgenie\BirthdayGenie\BirthdayGenie\Images\logo2.png" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" HeightRequest="200" WidthRequest="200" Margin="0,0,0,10"/>
+        <Image Source="logo2.png" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" HeightRequest="200" WidthRequest="200" Margin="0,0,0,10"/>
+
+
     </VerticalStackLayout>
 
 </uranium:UraniumContentPage>
