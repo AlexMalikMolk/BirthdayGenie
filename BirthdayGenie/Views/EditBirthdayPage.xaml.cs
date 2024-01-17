@@ -2,10 +2,11 @@ using BirthdayGenie.Data;
 using BirthdayGenie.Models;
 using Microsoft.Maui.Controls;
 using System;
+using UraniumUI.Pages;
 
 namespace BirthdayGenie.Views
 {
-    public partial class EditBirthdayPage : ContentPage
+    public partial class EditBirthdayPage : UraniumContentPage
     {
         private Birthday birthdayToEdit;
         private List<string> categoryOptions = new List<string> { "Electronics", "Sports", "Books", "Home", "Clothing", "Beauty" };

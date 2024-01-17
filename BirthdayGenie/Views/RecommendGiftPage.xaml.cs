@@ -2,10 +2,11 @@ using BirthdayGenie.Data;
 using BirthdayGenie.Models;
 using System.Diagnostics;
 using System.Text.Json;
+using UraniumUI.Pages;
 
 namespace BirthdayGenie.Views;
 
-public partial class RecommendGiftPage : ContentPage
+public partial class RecommendGiftPage : UraniumContentPage
 {
     private Birthday selectedBirthday;
     private List<Product>? products;
