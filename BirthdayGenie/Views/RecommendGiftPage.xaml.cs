@@ -15,54 +15,67 @@ public partial class RecommendGiftPage : ContentPage
         InitializeComponent();
         selectedBirthday = birthday;
 
-        // Anropa en asynkron metod för att undvika blocking
+        // call asyncronus to avoid blocking the UI thread
         _ = InitializeAsync();
     }
 
     private async Task InitializeAsync()
     {
-        // Hämta produkter från API asynkront
+        // Get products from API
         products = await GetProductsFromApiAsync();
 
-        // Filtera och visa rekommendationer
+        // Filter products and show recommendations
         ShowRecommendations();
     }
 
+    // Get products from API
     private async Task<List<Product>> GetProductsFromApiAsync()
     {
         using (var httpClient = new HttpClient())
         {
-            // Ange den lokala adressen där API:et körs
+
             var apiEndpoint = "http://localhost:5000/api/products";
 
-            // Gör ett GET-anrop för att hämta produkter från API
+
             var response = await httpClient.GetStringAsync(apiEndpoint);
 
-            // Deserialisera JSON till en lista med Product-objekt
+
             var result = JsonSerializer.Deserialize<List<Product>>(response);
 
-            // Om resultatet är null, returnera en tom lista istället
+
             return result ?? new List<Product>();
         }
     }
-
+    // Filter products and show recommendations
     private void ShowRecommendations()
     {
-        // Filtera produkter baserat på användarinformation och visa resultatet
+
         var filteredProducts = FilterProducts();
 
-        // Använd filteredProducts för att visa rekommendationer i användargränssnittet
-        productsListView.ItemsSource = filteredProducts;
+
+        if (filteredProducts == null || !filteredProducts.Any())
+        {
+            Debug.WriteLine("No matching products");
+
+            // Visa ett meddelande för användaren
+            DisplayAlert("No Matching Products", "Sorry, no matching products found.", "OK");
+
+            // Ta användaren tillbaka till startsidan
+            Navigation.PopAsync();
+
+
+        }
+        else
+        {
+
+            productsListView.ItemsSource = filteredProducts;
+        }
     }
 
     private List<Product> FilterProducts()
     {
-        if (products == null)
-        {
-            Debug.WriteLine("No matching products");
-        }
 
-
+        // Debug lines to check that the data is correct
         Debug.WriteLine($"Selected Birthday: {selectedBirthday}");
         Debug.WriteLine($"Selected Budget: {selectedBirthday.Budget}");
         Debug.WriteLine($"Selected Category: {selectedBirthday.Category}");
