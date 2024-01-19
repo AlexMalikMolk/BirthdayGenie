@@ -50,6 +50,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="MainPageViewModel.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\logo.jpg" />
 	  <None Remove="Resources\Images\logo2.png" />
 	</ItemGroup>

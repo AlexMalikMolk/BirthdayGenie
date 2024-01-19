@@ -12,10 +12,6 @@
 
              xmlns:local="clr-namespace:BirthdayGenie"
              x:Name="page">
-    <uranium:UraniumContentPage.BindingContext>
-        <local:MainPageViewModel />
-    </uranium:UraniumContentPage.BindingContext>
-
     <uranium:UraniumContentPage.Resources>
         <Style TargetType="Frame">
             <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainerDark}}" />
